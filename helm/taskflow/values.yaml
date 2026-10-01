@@ -1,0 +1,23 @@
+backend:
+  replicaCount: 2
+
+  image:
+    repository: shindevaibhavi11/taskflow-backend
+    tag: v1
+
+  service:
+    port: 5000
+
+frontend:
+  replicaCount: 2
+
+  image:
+    repository: shindevaibhavi11/taskflow-frontend
+    tag: v1
+
+  service:
+    type: LoadBalancer
+    port: 80
+
+mongodb:
+  image: mongo:7
